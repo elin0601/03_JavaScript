@@ -1,0 +1,9 @@
+pre > code {
+    background-color: rgb(248, 203, 118);
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 20px;
+    margin: 20px;
+    display: block;
+}
