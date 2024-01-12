@@ -1,4 +1,4 @@
-.calculator {
+.calculator, .calculator_test {
     width: 300px;
     height: 150px;
     border: 3px solid black;
@@ -25,4 +25,11 @@
 
 #calcResult {
     color: red;
+}
+
+.btn>button {
+    margin-top: 10px;
+    margin-left: 90px;
+    font-size: 20px;
+    font-weight: bold;
 }
