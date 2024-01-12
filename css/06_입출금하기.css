@@ -1,0 +1,26 @@
+
+.clacTest {
+    width: 300px;
+    height: 150px;
+    border: 3px solid black;
+    margin: auto;
+    padding: 25px;
+}
+
+.clacTest>div:nth-child(1), div:nth-child(2) {
+    border: 2px solid black;
+    padding: 10px;
+    margin: 5px;
+}
+.btn {
+    display: flex;
+    margin-top: 10px;  
+}
+
+.btn>button {
+    height: 30px;
+    margin: 0 5px;
+    flex-grow: 1;
+    font-size: 20px;
+    font-weight: bold;
+}
