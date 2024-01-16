@@ -3,12 +3,14 @@
     width: 300px;
     height: 150px;
     border: 3px solid black;
+    border-radius: 20px;
     margin: auto;
     padding: 25px;
 }
 
 .clacTest>div:nth-child(1), div:nth-child(2) {
     border: 2px solid black;
+    border-radius: 10px;
     padding: 10px;
     margin: 5px;
 }
