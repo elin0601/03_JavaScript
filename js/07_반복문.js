@@ -208,3 +208,237 @@ function check9() {
         console.log(str);
     }
 }
+
+/* 감소하는 for문 */
+function check10() {
+    // 5 4 3 2 1 로 감소하면서 출력
+    for(let num = 5; num >= 1; num--) {
+        console.log(num);
+    }
+}
+
+/* 
+  12345
+  1234
+  123
+  12
+  1
+ */
+function check11() {
+    for (let row = 5; row >=1; row-- ){
+        let str= "";
+        for ( let col = 1 ; col <= row ; col++) {
+            str += col;
+        }
+        console.log(str);
+    }
+}
+
+/*
+1
+12
+123
+1234
+123
+12
+1 
+*/
+
+// if, for문 내에 코드가 한 줄만 있다면 {} 생략 가능
+// function check12() {
+//     for (let x = 1 ; x <=3 ; x++) {
+//         let str= "";
+//         for (let y = 1 ; y <= x ; y++ ) str += y;
+
+//         console.log(str);
+//     }
+
+//     for (let row = 4; row >=1; row-- ){
+//         let str= "";
+//         for ( let col = 1 ; col <= row ; col++)  str += col;
+//         console.log(str);
+//     }
+  
+
+// }
+
+function check12(){
+
+    // 위쪽 삼각형
+    for(let row=1 ; row <= 3 ; row++){
+      
+      let str = "";
+      for(let col=1 ; col<=row ; col++)   str += col;
+      console.log(str);
+    }
+  
+    // 아랫쪽 삼각형
+    for(let row = 4 ; row >= 1 ; row--){
+  
+      let str = "";
+      for(let col=1 ; col<=row ; col++)   str += col;
+      console.log(str);
+    }
+
+    
+  console.log("----------------")
+
+  // 2중 for문 한 번만 사용하기
+
+  for(let row = 1 ; row <=7 ; row++){
+    let end = 0;
+    if (row <= 4) end = row;
+    else          end = 7 - row + 1
+    let str = "";
+    for(let col = 1; col<=end ; col++){
+        str += col;
+
+    }
+    console.log(str);
+
+  }
+}  
+
+
+/* 카운트를 이용해 출력하기
+    1 2 3 4
+    5 6 7 8
+    9 10 11 12
+*/
+function check13() {
+
+    let count = 1; // 카운트(세기) 위한 변수 선언
+    for(let row =1; row <=3; row++) {
+
+        let str = ""
+        for(let col = 1; col<=4; col++ ) {
+            str += count + " ";
+            count++; // count 값을 1 증가
+    }
+    console.log(str);
+    }
+}
+   
+/* 1부터 100 사이에 입력된 수의 배수가 몇 개 있나 count */
+function check14() {
+
+    // 입력된 배수
+    const input = Number(document.getElementById("input14").value);
+    
+    // 결과를 출력할 span
+    const result = document.getElementById("result14");
+
+    // 카운트(세기) 위한 변수 선언(아직 세어 보지 않았으므로 0개 부터 시작)
+    let count = 0;
+
+    for ( let num =1; num <=100; num++){ // 1~100 반복
+
+        // num이 input의 배수가 맞는 경우
+        if ( num % input == 0 ) {
+            count++; //count 1 증가
+        }
+    }
+
+    result.innerText = `${input}의 배수 : ${count} 개`;
+
+
+    // 출력 예시 
+    // 3의 배수 : 33개
+}
+
+
+/*
+1
+12
+123
+1234
+123
+12
+1 
+ */
+function check15() {
+    let count = 0;
+    for ( let row = 1; row <=7 ; row++) {
+        if ( row <= 4)  count++;  // 4행 이하일 경우 count 1 증가
+        else            count--;  // 4행 초과일 경우 count 1 감소
+
+        let str = "";
+        for ( let col=1; col <= count; col++) {
+            str+=col;
+        }
+        console.log(str);
+    }
+}
+
+/* while문 확인 */
+function check16(){
+    let val;  // 변수 선언만 하기 (undefined)
+
+    // 취소를 누르기 전 까지 반복 
+    // == 취소를 누르면 반복하지 않겠다
+    while (val !== null) {
+
+        /* 동일 비교 연산자 */
+        // !== -> 값, 자료형이 모두 다른 경우 true
+        // === -> 값, 자료형이 모두 같은 경우 true
+
+        val = prompt("입력 후 확인"); // 변수에 prompt 값 대입
+        // 확인 -> 입력한 값
+        // 취소 -> null
+        console.log(val);
+    }
+}
+
+/* 메뉴 주문하기 */
+function check17() {
+
+    // 메뉴 가격
+    const gimbab = 3000;
+    const ramen = 3500;
+    const donkkaseu = 5000;
+
+    // 주문 개수 카운트
+    let gCount = 0;
+    let rCount = 0;
+    let dCount = 0;
+
+    // prompt로 입력한 값을 저장할 변수
+    let input;  // undefined
+
+    while( input !== null ) {  // 취소 누르기 전까지 반복
+        input = prompt ("메뉴 번호를 입력하세요!!");
+        
+        switch(input) {
+             case '1' : gCount++; break;
+             case '2' : rCount++; break;
+             case '3' : dCount++; break;
+             case null : alert("주문 완료"); break;
+
+             default : alert("메뉴에 작성된 번호만 입력해주세요"); break;
+        }
+    }
+
+    alert(`김밥 : ${gCount}, 라면 : ${rCount}, 돈까스 : ${dCount}`);
+
+    let sum = (gCount * gimbab) + (rCount * ramen) + (dCount * donkkaseu);
+    alert(`총 가격 : ${sum}원`)
+}
+
+/* while을 for문 처럼 사용하기 */
+function check18() {
+    // 1부터 10까지 출력
+
+    let num =1;
+    while ( num<11 ){
+        console.log(num);
+        num++;
+    }
+
+    console.log("--------------");
+    /* 10부터 1까지 1씩 감소(while) */
+    let x =10; 
+    while( x > 0 ){
+        console.log(x);
+        x--;
+    }
+}
