@@ -6,18 +6,19 @@ function createTable() {
     const tBody = document.getElementById("tbody");
 
     theadRow.innerHTML="";
-    tBody.innerHTML="";
+
 
     for(let dan = start ; dan <= end ; dan++){
         theadRow.innerHTML += `<th>${dan} 단</th>`;
       }
 
-      tBody.innerHTML="";
+    tBody.innerHTML="";
     
-    for( let num= 1; num <=9;  num++){
+    for( let num= 1; num <= 9;  num++){
         let str ="<tr>";
+
         for(let dan = start ; dan <= end ; dan++) {
-        str.innerHTML += `<td>${dan} x ${num} = ${dan * num}</td>`;
+        str += `<td>${dan} x ${num} = ${dan * num}</td>`;
 
         }
         str += "</tr>";
