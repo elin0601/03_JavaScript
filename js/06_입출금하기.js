@@ -7,6 +7,7 @@ const password = '1234';                      // 비밀번호 저장 변수 (초
 const resultIn = document.getElementById("resultIn");
 const resultOut = document.getElementById("resultOut");
 
+const balanceResult = document.getElementById("balance");
 // function deposit() {
 //     let amount = document.getElementById("amount");
 //     if ( amount >=0 ) {
@@ -15,6 +16,8 @@ const resultOut = document.getElementById("resultOut");
 //         alert("금액을 다시 확인해주세요");
 //     }
 // }
+
+balanceResult.innerText = balance;
 
 function deposit() {
     const depositAmount = Number(document.getElementById('amount').value);
@@ -25,6 +28,7 @@ function deposit() {
 
     balance += depositAmount;
     alert(`${depositAmount}원이 입금 되었습니다. 현재 잔액: ${balance}원`);
+    balanceResult.innerText = balance;
 
 
 }
@@ -52,6 +56,7 @@ function withdrawal() {
             } else {
                 balance -= withdrawalAmount;
                 alert(`${withdrawalAmount}원이 출금 되었습니다. 남은 잔액: ${balance}원`);
+                balanceResult.innerText = `${balance}`
             }
         }else {
             alert("비밀번호가 일치하지 않습니다.");
