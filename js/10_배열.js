@@ -317,7 +317,7 @@ function check6() {
         let str = "";
         for( let col = arr[row].length -1; col>=0; col-- ) {
             str += arr[row][col] + " ";
-        }
+        }   
 
         console.log(str);
     }
