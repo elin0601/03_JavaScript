@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.head {
+    margin: auto;
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 10px;
+
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+#btn {
+    margin: auto;
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    border: 3px solid blue;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
