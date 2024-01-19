@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.mainContainer {
+    margin: 10px;
+}
+
+#addBtn #calBtn {
+    margin: 5px;
+}
+
+.container {
+    display:flex;
+    flex-direction: column;
+    margin-top: 5px;
+    width: 200px;
+}
