@@ -21,11 +21,10 @@
 
 .box {
     display: flex;
-    flex-direction: row;
     height: 200px;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    border: 2px solid black;
     transition-duration: 0.5s;   
 
 }
@@ -35,18 +34,28 @@
     width: 1000px;
     display: flex;
     justify-content: center;
-    border: 3px solid blue;
+    border: 3px solid rgb(85, 112, 231);
     border-radius: 5px;
     background-color: white;
     font-size: 20px;
     font-weight: bold;
+    cursor: pointer;
+}
+
+
+#btn:hover {
+    color: white;
+    background-color: rgb(85, 112, 231);
+}
+
+#btn:active {
+    border: 2px solid black;
 }
 
 .input {
     width: 200px;
     height: 25px;
     font-size: 17px;
-    margin-top: 2px;
     text-align: center;
     border-radius: 3px;
 }
