@@ -4,15 +4,16 @@ const calBtn = document.querySelector("#calBtn");
 const area = document.querySelector(".area");
 
 addBtn.addEventListener("click", ()=>{
-    const container = document.createElement("div");
+  const container = document.createElement("div");
 
-    container.classList.add("container");
-    area.append(container);
+  container.classList.add("container");
+  area.append(container);
 
-    const input = document.createElement("input");
-    input.type = "number";
+  const input = document.createElement("input");
+  input.type = "number";
+  input.classList.add("input");
 
-    container.append(input);   
+  container.append(input);   
 
 
 
@@ -31,17 +32,16 @@ addBtn.addEventListener("click", ()=>{
   
     span.addEventListener("click", e => {
   
-  
-    const parent = e.target.parentElement;
-  
-  
-    parent.remove();
-});
+      
+        const parent = e.target.parentElement;
+      
+      
+        parent.remove();
+    });
 
-container.append(input, span);
+  container.append(span);
 
 
-area.append(container);
 });
 
 
